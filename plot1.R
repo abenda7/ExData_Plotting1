@@ -1,7 +1,7 @@
 
 epc <- read.table("household_power_consumption.txt",stringsAsFactors=FALSE,
                   header=TRUE, sep=";",na.strings="?")
-epcf <- epc[epc$Date=="2/1/2007"|epc$Date=="2/2/2007",]
+epcf <- epc[epc$Date=="1/2/2007"|epc$Date=="2/2/2007",]
 rm(epc)
 epcf$Date <- as.Date( epcf$Date,format="%d/%m/%Y")
 hist(epcf$Global_active_power,col="red"
